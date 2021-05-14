@@ -9,3 +9,10 @@
 Na aplicação prática do estudo foram utilizados 4 grafos diferentes variando tanto o número de arestas quanto o de vértices. Assim possibilitando a avaliação de desempenho dos diferentes algoritmos em situações diversas. O primeiro grafo observado na figura abaixo apresenta 7 vértices e 9 arestas, o segundo 6 vértices e 11 arestas, o terceiro 10 vértices e 45 arestas e o último 4 vértices e 5 arestas.
 
 ![grafos estudados](https://i.imgur.com/AvfstCO.png)
+
+A partir da aplicação dos algoritmos nos diversos grafos representados na figura acima foram obtidos os seguintes resultados:
+
+|Algoritmo|Grafo 1|Grafo 2|Grafo 3|Grafo 4|
+| --- | --- | --- | --- | --- |
+|Força Bruta|14174300 ns|10253200 ns|659882428300 ns|988100 ns|
+|Caminhamento|2730700 ns|9873500 ns|+30 min|2021300 ns|

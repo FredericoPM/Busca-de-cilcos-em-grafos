@@ -8,7 +8,6 @@ public class Grafo{
         this.numArestas = numArestas;
         this.numVertices = numVertices;
         la = new ListaDeAjacencia(numArestas,numVertices, arestas, direcionado);
-        ap = new ArvoreDeProfundidade(la);
     }
     // retorna o ultimo valor de um vetor q seja diferente de -1
     private int lastAvailable(int[] vet){
@@ -56,10 +55,11 @@ public class Grafo{
         return result;
     }
     public void ciclos(){
+        ap = new ArvoreDeProfundidade(la);
         Queue<int[]> aux = new LinkedList<int[]>();
         List<int[]> ciclosF = new ArrayList<int[]>();
         int[] caminho;
-
+        //acha todos os ciclos ligados a cara aresta que nao seja de arvore
         for(int i=0; i<numArestas; i++){
             if(ap.type[i] != 'A'){
                 caminho = new int[numVertices];
@@ -95,7 +95,7 @@ public class Grafo{
             }
         }
         //remove permutações do msm ciclo. Essa repetição ocorre quando um 
-        // ciclo passa por 2 arestas que não sejam de arvore
+        //ciclo passa por 2 arestas que não sejam de arvore
         boolean moreThenOneCicle;
         for(int i = 0; i < ciclosF.size(); i++){
             moreThenOneCicle = false;
@@ -121,7 +121,6 @@ public class Grafo{
             System.out.println("");
         }
     }
-    //
     private void permutacao(int[] vet, int[] options, int i, List<int[]> permutacoes){
         int[] auxVet = new int[vet.length];
 
@@ -153,7 +152,7 @@ public class Grafo{
             options[i] = i;
 
         int[] vet;
-
+        //gera todas as permutaçoes possiveis
         for(int i = 3; i <= numVertices; i++){
             vet = new int[i];
             permutacao(vet, options, 0, permutacoes);
@@ -161,7 +160,7 @@ public class Grafo{
 
         int[] aux;
         boolean flag;
-        
+        //remove aquelas que não sao ciclos
         for(int i = 0; i < permutacoes.size(); i++){
             vet = permutacoes.get(i);
             for(int j = 0; j < vet.length; j++){
@@ -181,7 +180,7 @@ public class Grafo{
 
             }
         }
-
+        //remove permutaçoes que represemtam o mesmo ciclo
         for(int i = 0; i < permutacoes.size(); i++){
             vet = permutacoes.get(i);
             for(int j = i+1; j < permutacoes.size(); j++){

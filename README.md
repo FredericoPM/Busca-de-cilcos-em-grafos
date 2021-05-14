@@ -12,7 +12,7 @@ Na aplicação prática do estudo foram utilizados 4 grafos diferentes variando 
 
 A partir da aplicação dos algoritmos nos diversos grafos representados na figura acima foram obtidos os seguintes resultados:
 
-|Algoritmo|Grafo 1|Grafo 2|Grafo 3|Grafo 4|
+|Algoritmo|Grafo 1 (7V, 9A)|Grafo 2 (6V, 11A)|Grafo 3 (10V, 45A)|Grafo 4 (4V, 5A)|
 | --- | --- | --- | --- | --- |
 |Força Bruta|14174300 ns|10253200 ns|659882428300 ns|988100 ns|
 |Caminhamento|2730700 ns|9873500 ns|+30 min|2021300 ns|

@@ -14,7 +14,7 @@ A partir da aplicação dos algoritmos nos diversos grafos representados na figu
 
 |Algoritmo|Grafo 1 (7V, 9A)|Grafo 2 (6V, 11A)|Grafo 3 (10V, 45A)|Grafo 4 (4V, 5A)|
 | --- | --- | --- | --- | --- |
-|Caminhamento|14174300 ns|10253200 ns|659882428300 ns|988100 ns|
-|Força Bruta|2730700 ns|9873500 ns|+30 min|2021300 ns|
+|Força Bruta|14174300 ns|10253200 ns|+30 min|988100 ns|
+|Caminhamento|2730700 ns|9873500 ns|659882428300 ns|2021300 ns|
 
 A partir do tempo de execução medido pode se perceber que o algoritmo de caminhamento apresenta um desempenho melhor que o de força bruta na maioria dos casos, e quanto maior o grafo mais discrepante a diferença de desempenho é. Isso ocorre pois o número de permutações cresce de forma fatorial de acordo com o número de vértices no grafo. Já o algoritmo de caminhamento cresce de uma forma mais linear em relação ao número de arestas e vértices. Desta forma, o algoritmo de caminhamento não leva tanto tempo quando o de permutação quando se trata de grafos maiores, porém em grafos pequenos, como o 4, ele pode se sobressair já que o número de permutações é muito pequeno.
